@@ -8,18 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		22F8ACD32C666D0E001B0DCF /* VisonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F8ACD22C666D0E001B0DCF /* VisonApp.swift */; };
-		22F8ACD52C666D0E001B0DCF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F8ACD42C666D0E001B0DCF /* ContentView.swift */; };
 		22F8ACD72C666D0F001B0DCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22F8ACD62C666D0F001B0DCF /* Assets.xcassets */; };
 		22F8ACDB2C666D0F001B0DCF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22F8ACDA2C666D0F001B0DCF /* Preview Assets.xcassets */; };
+		22F8ACE32C666D92001B0DCF /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 22F8ACE22C666D92001B0DCF /* ComposableArchitecture */; };
+		22F8ACEA2C666F5F001B0DCF /* ContuerFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F8ACE92C666F5F001B0DCF /* ContuerFeature.swift */; };
+		22F8ACEC2C6671CA001B0DCF /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F8ACEB2C6671CA001B0DCF /* CounterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		22F8ACCF2C666D0E001B0DCF /* Vison.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vison.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22F8ACD22C666D0E001B0DCF /* VisonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisonApp.swift; sourceTree = "<group>"; };
-		22F8ACD42C666D0E001B0DCF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		22F8ACD62C666D0F001B0DCF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22F8ACD82C666D0F001B0DCF /* Vison.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Vison.entitlements; sourceTree = "<group>"; };
 		22F8ACDA2C666D0F001B0DCF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		22F8ACE92C666F5F001B0DCF /* ContuerFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContuerFeature.swift; sourceTree = "<group>"; };
+		22F8ACEB2C6671CA001B0DCF /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22F8ACE32C666D92001B0DCF /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,8 +56,10 @@
 		22F8ACD12C666D0E001B0DCF /* Vison */ = {
 			isa = PBXGroup;
 			children = (
+				22F8ACE52C666DA5001B0DCF /* ui */,
+				22F8ACE42C666D9B001B0DCF /* features */,
+				22F8ACE82C666F1D001B0DCF /* utils */,
 				22F8ACD22C666D0E001B0DCF /* VisonApp.swift */,
-				22F8ACD42C666D0E001B0DCF /* ContentView.swift */,
 				22F8ACD62C666D0F001B0DCF /* Assets.xcassets */,
 				22F8ACD82C666D0F001B0DCF /* Vison.entitlements */,
 				22F8ACD92C666D0F001B0DCF /* Preview Content */,
@@ -67,6 +73,45 @@
 				22F8ACDA2C666D0F001B0DCF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		22F8ACE42C666D9B001B0DCF /* features */ = {
+			isa = PBXGroup;
+			children = (
+				22F8ACE92C666F5F001B0DCF /* ContuerFeature.swift */,
+			);
+			path = features;
+			sourceTree = "<group>";
+		};
+		22F8ACE52C666DA5001B0DCF /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				22F8ACE72C666E89001B0DCF /* screens */,
+				22F8ACE62C666E81001B0DCF /* components */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
+		22F8ACE62C666E81001B0DCF /* components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
+		22F8ACE72C666E89001B0DCF /* screens */ = {
+			isa = PBXGroup;
+			children = (
+				22F8ACEB2C6671CA001B0DCF /* CounterView.swift */,
+			);
+			path = screens;
+			sourceTree = "<group>";
+		};
+		22F8ACE82C666F1D001B0DCF /* utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,6 +130,9 @@
 			dependencies = (
 			);
 			name = Vison;
+			packageProductDependencies = (
+				22F8ACE22C666D92001B0DCF /* ComposableArchitecture */,
+			);
 			productName = Vison;
 			productReference = 22F8ACCF2C666D0E001B0DCF /* Vison.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +161,9 @@
 				Base,
 			);
 			mainGroup = 22F8ACC62C666D0E001B0DCF;
+			packageReferences = (
+				22F8ACE12C666D92001B0DCF /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			productRefGroup = 22F8ACD02C666D0E001B0DCF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,8 +190,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22F8ACD52C666D0E001B0DCF /* ContentView.swift in Sources */,
+				22F8ACEA2C666F5F001B0DCF /* ContuerFeature.swift in Sources */,
 				22F8ACD32C666D0E001B0DCF /* VisonApp.swift in Sources */,
+				22F8ACEC2C6671CA001B0DCF /* CounterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,8 +334,8 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -292,10 +344,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.cmd.Vison;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -320,8 +373,8 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -330,10 +383,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.cmd.Vison;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -359,6 +413,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		22F8ACE12C666D92001B0DCF /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.12.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		22F8ACE22C666D92001B0DCF /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 22F8ACE12C666D92001B0DCF /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 22F8ACC72C666D0E001B0DCF /* Project object */;
 }
